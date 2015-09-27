@@ -33,7 +33,7 @@
          }
          var container = '<div class="SelectIT-container"/>',
              selectedOption = '<div class="SelectIT-selected"><span class="placeholder">'+ placeholder +'</span></div>',
-             arrows = '<div class="SelectIT-arrows"><span class="arrow-down"/></div>',
+             arrows = '<div class="SelectIT-arrows"><span class="arrow"/></div>',
              optionList = $('<ul/>',{
                  'class':'SelectIT-options'
              });        
@@ -64,11 +64,12 @@
                  val = _$this.text();
              
              elem.closest('.SelectIT-container').find('ul > li').removeClass('selected');
+             elem.find('option').removeAttr('selected');
+             
              _$this.addClass('selected');
              elem.closest('.SelectIT-container').find('.SelectIT-selected > span.placeholder').text(val);
-
-             elem.find('option').removeAttr('selected')
              elem.find('option').eq(_$this.index()).attr('selected','selected').closest('select').trigger('change');
+             
              
          });
          
@@ -80,8 +81,15 @@
          container.click(function(e){
              e.stopPropagation();
              _$this = $(this);
-             $('.SelectIT-container').not(_$this).find('ul').removeClass('active');
+             $('.SelectIT-container').not(_$this).removeClass('with-dropdown').find('ul').removeClass('active');
              _$this.find('ul').toggleClass('active');
+             
+             if(_$this.hasClass('with-dropdown')){
+                 _$this.removeClass('with-dropdown');
+             }else {
+                 _$this.addClass('with-dropdown');
+             }
+             
          });
          
          $(document).on('click',function(){

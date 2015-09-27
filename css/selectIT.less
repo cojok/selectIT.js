@@ -35,7 +35,7 @@
             float: right;
             line-height: 25px;
             padding: 5px 0;
-            span.arrow-down {
+            span.arrow {
                 width: 15px;
                 height: 15px;
                 background: url('../img/down_arrow.png') no-repeat center /contain;
@@ -80,10 +80,12 @@
         }
     }
     
-//    &:hover {
-//        ul{
-//            display: block;
-//        }
-//    }
+    &.with-dropdown {
+        .SelectIT-arrows{
+            span.arrow {
+                background: url('../img/up_arrow.png') no-repeat center /contain;
+            }
+        }
+    }
 }
 

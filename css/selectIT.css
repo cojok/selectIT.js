@@ -48,7 +48,7 @@
   line-height: 25px;
   padding: 5px 0;
 }
-.SelectIT-container .SelectIT-selected .SelectIT-arrows span.arrow-down {
+.SelectIT-container .SelectIT-selected .SelectIT-arrows span.arrow {
   width: 15px;
   height: 15px;
   background: url('../img/down_arrow.png') no-repeat center / contain;
@@ -88,4 +88,7 @@
 }
 .SelectIT-container ul.active {
   display: block;
+}
+.SelectIT-container.with-dropdown .SelectIT-arrows span.arrow {
+  background: url('../img/up_arrow.png') no-repeat center / contain;
 }
