@@ -55,17 +55,17 @@
      
      var addEvt = function(){
         
-         var options = $('.SelectIT-container').find('ul > li'),
-            container = $('.SelectIT-container'),
-            list = $('.SelectIT-container').find('ul');
+         var options = elem.closest('.SelectIT-container').find('ul > li'),
+            container = elem.closest('.SelectIT-container'),
+            list = elem.closest('.SelectIT-container').find('ul');
          
          options.click(function(){
              var _$this = $(this),
                  val = _$this.text();
              
-             $('.SelectIT-container').find('ul > li').removeClass('selected');
+             elem.closest('.SelectIT-container').find('ul > li').removeClass('selected');
              _$this.addClass('selected');
-             $('.SelectIT-container').find('.SelectIT-selected > span.placeholder').text(val);
+             elem.closest('.SelectIT-container').find('.SelectIT-selected > span.placeholder').text(val);
 
              elem.find('option').removeAttr('selected')
              elem.find('option').eq(_$this.index()).attr('selected','selected').closest('select').trigger('change');
@@ -80,11 +80,12 @@
          container.click(function(e){
              e.stopPropagation();
              _$this = $(this);
+             $('.SelectIT-container').not(_$this).find('ul').removeClass('active');
              _$this.find('ul').toggleClass('active');
          });
          
          $(document).on('click',function(){
-             var container = $('.SelectIT-container');
+             var container = elem.closest('.SelectIT-container');
              container.find('ul').fadeOut();
          });
          
