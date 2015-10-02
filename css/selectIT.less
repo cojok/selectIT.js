@@ -70,10 +70,16 @@
             white-space: nowrap;
             text-overflow: ellipsis;
 
-            &:hover {
+            &:not(.disabled):hover {
                 background: #006699;
                 color: #fff;
             }
+			
+			&.disabled {
+				opacity: .3;
+				pointer-events: none;
+				cursor: not-allowed;
+			}
         }
 
         &.active { display: block; }

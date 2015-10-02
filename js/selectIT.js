@@ -77,10 +77,16 @@
              $('<li/>',{
                  'class': 'option'+i,
                  'data-val'  : $(this).val(),
-                 'text' : $(this).text()
+                 'text' : $(this).text(),
+				 'data-disabled': ((typeof $(this).prop('disabled') !== 'undefined' || $(this).prop('disabled') !== '') ? $(this).prop('disabled'):'false')
              }).appendTo(optionList);
          });
-
+		 
+//		 if($('.SelectIT-options li').data('disabled') === true && $('.SelectIT-options li').data('disabled') !== '' ){
+//			
+//			 $('.SelectIT-options li').addClass('disabled');
+//			 
+//		 }
      };
 	 
 	 /**
@@ -89,11 +95,19 @@
       */
      var addEvt = function(){
         
-         var options = elem.closest('.SelectIT-container').find('ul > li'),
+         var listOptions = elem.closest('.SelectIT-container').find('ul > li:not(.disabled)'),
             container = elem.closest('.SelectIT-container'),
             list = elem.closest('.SelectIT-container').find('ul');
+		 
+		 $.each(listOptions,function(i,v){
+			 if($(this).data('disabled')){
+				 $(this).addClass('disabled');	
+			 }
+		 });
+		 
+		 listOptions = listOptions.not('.disabled');
          
-         options.click(function(){
+         listOptions.click(function(){
              var _$this = $(this),
                  val = _$this.text();
              

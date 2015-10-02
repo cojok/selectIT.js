@@ -82,9 +82,14 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.SelectIT-container ul > li:hover {
+.SelectIT-container ul > li:not(.disabled):hover {
   background: #006699;
   color: #fff;
+}
+.SelectIT-container ul > li.disabled {
+  opacity: .3;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 .SelectIT-container ul.active {
   display: block;
