@@ -1,26 +1,46 @@
-'use strinct';
+/**
+ * SelectIT.js jQuery plugin
+ * https://github.com/cojok/selectIT.js
+ *
+ * Copyright 2015 Flavius Cojocariu <cojokka@gmail.com>
+ * License: MIT (http://www.opensource.org/licenses/mit-license.php)
+*/
+
+'use strict';
 
 (function($){
+ /**
+  * [selectIT[plugin class]
+  * @param {[[stirng]]} element [['.selector'] The select(s) tag selector]
+  */
  var selectIT = function(element)
  {
+     
      var elem = $(element);
      var _$this = this;
 
 
-     // Public method - can be called from client code
-     _$this.constructor = function()
-     {
-
+     /**
+      * [Constructor method[Description]] 
+      *  initialize SelectIT method and create the custom select option dropdown
+      */
+     _$this.constructor = function(){
          createSelectIT();
      };
 
-     // Private method - can only be called from within this object
-     var createSelectIT = function()
-     {
+     /**
+      * [createSelectIT[Description]]
+      * stores all the methods that help for initialzing the plugin
+      */
+     var createSelectIT = function(){
          getTemplate();
          addEvt();
      };
      
+     /**
+      * [getTemplate[Description]]
+      * This method helps in creating the html template for the custom select option dropdown
+      */
      var getTemplate = function(){
          elem.hide();
          var placeholder = '';
@@ -53,6 +73,7 @@
 
      };
      
+     
      var addEvt = function(){
         
          var options = elem.closest('.SelectIT-container').find('ul > li'),
@@ -73,10 +94,10 @@
              
          });
          
-          elem.change(function(){
-                 console.log('this is onchange evt');
-          });
-            
+//          elem.change(function(){
+//                 console.log('this is onchange evt');
+//          });
+//            
          
          container.click(function(e){
              e.stopPropagation();
@@ -101,8 +122,8 @@
      
  };
 
- $.fn.selectIT = function()
- {
+ $.fn.selectIT = function(){
+     
      return this.each(function()
      {
          var element = $(this);
