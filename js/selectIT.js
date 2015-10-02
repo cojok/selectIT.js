@@ -42,13 +42,25 @@
       * This method helps in creating the html template for the custom select option dropdown
       */
      var getTemplate = function(){
-         elem.hide();
-         var placeholder = '';
+         
+		 elem.hide();
+         
+		 /*checking and creating the placeholder value for the dropdown. 
+		 * If the select does not have the data-placeholder attribute, it gets a predefined string
+		 *
+		 */
+		 var placeholder = '';
          if(typeof elem.data('placeholder') !== 'undefined' && elem.data('placeholder') !== '') {
              placeholder = elem.data('placeholder');
          }else{
              placeholder = 'Select';
          }
+		 
+		 /* creating the template elements
+		  * container => the wrapper for the select and the new dorpdown
+		  * selectedOption => the selectIT.js dropdown placeholder wrapper
+		  * optionList => the selectIT.js dropdown options, copied from the old select
+		 */
          var container = '<div class="SelectIT-container"/>',
              selectedOption = '<div class="SelectIT-selected"><span class="placeholder">'+ placeholder +'</span></div>',
              arrows = '<div class="SelectIT-arrows"><span class="arrow"/></div>',
@@ -70,8 +82,11 @@
          });
 
      };
-     
-     
+	 
+	 /**
+      * [addEvt[Description]]
+      * This method helps in creating the events needed for the selctIT.js dropdown
+      */
      var addEvt = function(){
         
          var options = elem.closest('.SelectIT-container').find('ul > li'),
@@ -92,10 +107,10 @@
              
          });
          
-//          elem.change(function(){
-//                 console.log('this is onchange evt');
-//          });
-//            
+          elem.change(function(e){
+                 console.log('this is onchange evt for element '+ $(this).attr('name') + ' and has value: ' + $(this).val());
+          });
+            
          
          container.click(function(e){
              e.stopPropagation();
@@ -117,6 +132,8 @@
          });
          
      };
+	 
+	 
      
  };
 
