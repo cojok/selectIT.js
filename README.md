@@ -39,6 +39,6 @@ How to use the selectIT.js plugin:
 	  });
 	```
 
-3. SelectIT.js validation needs to be made on the select tag as a normal validation for non custom select tag. This is posible because the change event it's triggered when the values are changing in the SelectIT.js plugin.
+3. SelectIT.js validation needs to be made on the select tag as a normal validation for non custom select tag. This is posible because the SelectIT.js plugin is changing also the select tag value according to the plugin selected element.
 
 
