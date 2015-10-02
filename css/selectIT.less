@@ -73,12 +73,13 @@
             &:not(.disabled):hover {
                 background: #006699;
                 color: #fff;
+				text-overflow: clip;
             }
 			
 			&.disabled {
 				opacity: .3;
+				cursor: not-allowed!important;
 				pointer-events: none;
-				cursor: not-allowed;
 			}
         }
 

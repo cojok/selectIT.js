@@ -77,16 +77,12 @@
              $('<li/>',{
                  'class': 'option'+i,
                  'data-val'  : $(this).val(),
-                 'text' : $(this).text(),
+                 'html' : '<span>'+$(this).text()+'</span>',
 				 'data-disabled': ((typeof $(this).prop('disabled') !== 'undefined' || $(this).prop('disabled') !== '') ? $(this).prop('disabled'):'false')
              }).appendTo(optionList);
+			 
          });
 		 
-//		 if($('.SelectIT-options li').data('disabled') === true && $('.SelectIT-options li').data('disabled') !== '' ){
-//			
-//			 $('.SelectIT-options li').addClass('disabled');
-//			 
-//		 }
      };
 	 
 	 /**
@@ -99,14 +95,17 @@
             container = elem.closest('.SelectIT-container'),
             list = elem.closest('.SelectIT-container').find('ul');
 		 
+		 // checking for disabled options
 		 $.each(listOptions,function(i,v){
 			 if($(this).data('disabled')){
 				 $(this).addClass('disabled');	
 			 }
 		 });
 		 
+		 // eliminate disabled options from the the list selector, no click event on them
 		 listOptions = listOptions.not('.disabled');
-         
+		 
+		 //click event on the optios
          listOptions.click(function(){
              var _$this = $(this),
                  val = _$this.text();
@@ -122,10 +121,64 @@
          });
          
           elem.change(function(e){
-                 console.log('this is onchange evt for element '+ $(this).attr('name') + ' and has value: ' + $(this).val());
+			  console.log('this is onchange evt for element '+ $(this).attr('name') + ' and has value: ' + $(this).val());
+                 return function(){
+					 console.log('this is onchange evt for element '+ $(this).attr('name') + ' and has value: ' + $(this).val());
+				 }
           });
+		 
+
+//		 var moveLeftLongText = function(selector,moveLeft,over,speed){
+//			 var i = 0;
+//			if(over = true){
+//				 selector.animate({
+//					 marginLeft:'-'+moveLeft
+//				 },{
+//					duration:speed,
+//					complete:function(){
+//					 $(this).css({
+//						 marginLeft : moveLeft*.86
+//					 });
+//					 moveLeftLongText(selector,moveLeft,over,3500);
+//				 }});
+//			}else{
+//				moveLeftLongText(selector,0,false,0);
+//			}
+//		 };
+		 
+		 var hoverInterval = "";
+		 
+		 listOptions.hover(function(){
+
+			 var moveLeft = $(this).find('span').width() + $(this).find('span').position().left ,
+				 selector = $(this).children('span');
+
+			 if(!(moveLeft > $(this).width())){
+				 moveLeft = 0;
+
+			 }
+			 
+			 hoverInterval = setInterval(function(){
+				 selector.animate({
+					 marginLeft:'-'+(moveLeft)/2
+				 },{
+					duration:3500,
+					complete:function(){
+					 $(this).css({
+						 marginLeft : moveLeft*.8
+					 });
+
+				 }});
+			 },100);
+
+			 
+		 },function(){
+			 var selector = $(this).find('span');
+			 clearInterval(hoverInterval);
+			 selector.stop(true,true).removeAttr('style');
+		 });
             
-         
+         //click event on the container
          container.click(function(e){
              e.stopPropagation();
              _$this = $(this);
@@ -140,9 +193,10 @@
              
          });
          
+		 //click event on the document in order to hide the container
          $(document).on('click',function(){
              var container = elem.closest('.SelectIT-container');
-             container.find('ul').fadeOut();
+             container.find('ul').removeClass('active').closest('.SelectIT-container').removeClass('with-dropdown');
          });
          
      };

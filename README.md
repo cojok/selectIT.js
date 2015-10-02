@@ -11,6 +11,12 @@ This was tested in the lates versions of FireFox, Chrome and Safari. I have also
 
 Please check my todo list file to see what is comming up.
 
+Features:
+  1. Long text is truncated;
+  2. On hover long text is visible in a nice way;
+  3. Easy to customize;
+  4. LESS version;
+  5. jQuery dependent
 
 How to use the selectIT.js plugin:
 
