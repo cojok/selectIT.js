@@ -14,8 +14,15 @@ Please check my todo list file to see what is comming up.
 
 How to use the selectIT.js plugin:
 
+1. In the HTML select tag you need to have:
+    ⋅⋅* name(a msut for using it in a ajax call);
+    ⋅⋅* class,id or nothing for identifying the element for the plugin
+    ⋅⋅* placeholder for having the placeholder text for the list
+    ⋅⋅* options must have values in order to trigger the change event on the select 
+    ⋅⋅* TBA
+
 ```HTML
-<select name="selectIT" id="SelectIT" placeholder="SelectIT">
+<select name="selectIT" class="selectIT" placeholder="SelectIT">
         <option value="Jan">January</option>
         <option value="Feb">February</option>
         <option value="Mar">March</option>

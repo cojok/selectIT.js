@@ -46,8 +46,6 @@
          var placeholder = '';
          if(typeof elem.data('placeholder') !== 'undefined' && elem.data('placeholder') !== '') {
              placeholder = elem.data('placeholder');
-//         } else if(elem.find('option').val() == ''){
-//             placeholder = elem.find('option').text();
          }else{
              placeholder = 'Select';
          }

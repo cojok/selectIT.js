@@ -1,6 +1,5 @@
 @import 'elements.less';
 
-
 .SelectIT-container {
     .user-select(none);
     background: #fff;
@@ -15,7 +14,7 @@
     cursor: pointer;
     margin: 50px auto;
     padding: 0;
-    
+
     .SelectIT-selected {
         width: 90%;
         height: 25px;
@@ -23,6 +22,7 @@
         text-align: left;
         position: relative;
         padding: 0 10px;
+
         > span.placeholder {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -30,11 +30,13 @@
             width: 80%;
             display: inline-block;
         }
+
         .SelectIT-arrows {
             position: relative;
             float: right;
             line-height: 25px;
             padding: 5px 0;
+
             span.arrow {
                 width: 15px;
                 height: 15px;
@@ -43,10 +45,10 @@
             }
         }
     }
-    
+
     ul {
         position: absolute;
-        top:12px;
+        top: 12px;
         border: 1px solid #ccc;
         text-align: left;
         padding: 0;
@@ -59,7 +61,7 @@
         background: #fff;
         text-overflow: ellipsis;
         z-index: 999;
-        
+
         > li {
             list-style: none;
             text-align: left;
@@ -71,21 +73,11 @@
             &:hover {
                 background: #006699;
                 color: #fff;
+            }
+        }
 
-            }
-        } 
-        
-        &.active {
-            display: block;
-        }
+        &.active { display: block; }
     }
-    
-    &.with-dropdown {
-        .SelectIT-arrows{
-            span.arrow {
-                background: url('../img/up_arrow.png') no-repeat center /contain;
-            }
-        }
-    }
+
+    &.with-dropdown .SelectIT-arrows span.arrow { background: url('../img/up_arrow.png') no-repeat center /contain; }
 }
-
