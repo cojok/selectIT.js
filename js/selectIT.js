@@ -11,7 +11,7 @@
 (function($){
  /**
   * [selectIT[plugin class]
-  * @param {[[stirng]]} element [['.selector'] The select(s) tag selector]
+  * @param {[[stirng]]} element [['selector'] The select(s) tag selector]
   */
  var selectIT = function(element)
  {
