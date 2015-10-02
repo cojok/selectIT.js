@@ -19,7 +19,7 @@ How to use the selectIT.js plugin:
     * class,id or nothing for identifying the element for the plugin
     * placeholder for having the placeholder text for the list
     * options must have values in order to trigger the change event on the select
-	+ options with property disabled are acting the same in the SelectIT.js plugin
+	* options with property disabled are acting the same in the SelectIT.js plugin
     * TBA
 
 	```HTML
