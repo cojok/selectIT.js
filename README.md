@@ -21,23 +21,23 @@ How to use the selectIT.js plugin:
     * options must have values in order to trigger the change event on the select 
     * TBA
 
-```HTML
-<select name="selectIT" class="selectIT" placeholder="SelectIT">
-        <option value="Jan">January</option>
-        <option value="Feb">February</option>
-        <option value="Mar">March</option>
-        <option value="Apr">April</option>
-        <option value="May">May</option>
-    </select>
-```
+	```HTML
+	<select name="selectIT" class="selectIT" placeholder="SelectIT">
+			<option value="Jan">January</option>
+			<option value="Feb">February</option>
+			<option value="Mar">March</option>
+			<option value="Apr">April</option>
+			<option value="May">May</option>
+		</select>
+	```
 
 2. JS calling for the plugin:
 
-```javascript
-$(function () {
-    $('.selectIT').selectIT();
-  });
-```
+	```javascript
+	$(function () {
+		$('.selectIT').selectIT();
+	  });
+	```
 
 3. SelectIT.js validation needs to be made on the select tag as a normal validation for non't custom select tag. This is posible because hte change event it's triggered when the values are changing in the SelectIT.js plugin.
 
