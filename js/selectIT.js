@@ -203,7 +203,7 @@
 			 e.stopPropagation();
 			 var _$this = $(this);
 			 
-			 elem.find('option').removeAttr('selected');
+			 elem.find('option').removeAttr('selected').parent('select');
 			 _$this.closest('.SelectIT-selected').find('span.placeholder').text(placeholderTxt);
 			 _$this.removeAttr('style');
 		 });
