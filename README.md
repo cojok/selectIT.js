@@ -30,12 +30,12 @@ How to use the selectIT.js plugin:
 
 	```HTML
 	<select name="selectIT" class="selectIT" placeholder="SelectIT">
-			<option value="Jan">January</option>
-			<option value="Feb">February</option>
-			<option value="Mar">March</option>
-			<option value="Apr">April</option>
-			<option value="May">May</option>
-		</select>
+		<option value="Jan">January</option>
+		<option value="Feb">February</option>
+		<option value="Mar">March</option>
+		<option value="Apr">April</option>
+		<option value="May">May</option>
+	</select>
 	```
 
 2. JS calling for the plugin:
@@ -48,4 +48,20 @@ How to use the selectIT.js plugin:
 
 3. SelectIT.js validation needs to be made on the select tag as a normal validation for non custom select tag. This is posible because the SelectIT.js plugin is changing also the select tag value according to the plugin selected element.
 
+4. USing the disabled options in the select list: 
 
+	```HTML
+	<select name="selectIT" class="selectIT" placeholder="SelectIT">
+		<option disabled="disabled" value="Jan">January</option>
+		<option value="Feb">February</option>
+		<option value="Mar">March</option>
+		<option disabled="disabled" value="Apr">April</option>
+		<option value="May">May</option>
+	</select>
+	```
+	
+	```javascript
+	$(function () {
+		$('.selectIT').selectIT();
+	  });
+	```

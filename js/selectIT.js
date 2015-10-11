@@ -61,9 +61,23 @@
 		  * selectedOption => the selectIT.js dropdown placeholder wrapper
 		  * optionList => the selectIT.js dropdown options, copied from the old select
 		 */
-         var container = '<div class="SelectIT-container"/>',
-             selectedOption = '<div class="SelectIT-selected"><span class="placeholder">'+ placeholder +'</span></div>',
-             arrows = '<div class="SelectIT-arrows"><span class="arrow"/></div>',
+         var container = $('<div/>',{
+			 'class' : 'SelectIT-container'
+		 	 }),
+			 
+			 selectedOption = $('<div/>',{
+				'class' : 'SelectIT-selected',
+				 'html' : $('<span/>',{
+					 'class' : 'placeholder',
+					 'text'  : placeholder
+				 })
+			 }),
+			 arrows = $('<div/>',{
+				 'class' : 'SelectIT-arrows',
+				 'html'  : $('<span/>',{
+					 'class' : 'arrow'
+				 })
+			 }),
              optionList = $('<ul/>',{
                  'class':'SelectIT-options'
              });        
@@ -83,6 +97,13 @@
 			 
          });
 		 
+		 
+		 
+		 if(elem.data('deselect') === 'deselect' && typeof elem.data('deselect') != 'undefined'){
+			 $('<span/>',{
+				 'class' : 'deselect'
+			 }).appendTo(selectedOption);
+		 }
      };
 	 
 	 /**
@@ -93,7 +114,10 @@
         
          var listOptions = elem.closest('.SelectIT-container').find('ul > li:not(.disabled)'),
             container = elem.closest('.SelectIT-container'),
-            list = elem.closest('.SelectIT-container').find('ul');
+            list = elem.closest('.SelectIT-container').find('ul'),
+			deselectIcon = elem.closest('.SelectIT-container').find('.SelectIT-selected > span.deselect'),
+			placeholderTxt = elem.closest('.SelectIT-container').find('.SelectIT-selected > span.placeholder').text();
+		 
 		 
 		 // checking for disabled options
 		 $.each(listOptions,function(i,v){
@@ -116,7 +140,7 @@
              _$this.addClass('selected');
              elem.closest('.SelectIT-container').find('.SelectIT-selected > span.placeholder').text(val);
              elem.find('option').eq(_$this.index()).attr('selected','selected').closest('select').trigger('change');
-             
+			 deselectIcon.show();
              
          });
          
@@ -126,25 +150,6 @@
 					 console.log('this is onchange evt for element '+ $(this).attr('name') + ' and has value: ' + $(this).val());
 				 }
           });
-		 
-
-//		 var moveLeftLongText = function(selector,moveLeft,over,speed){
-//			 var i = 0;
-//			if(over = true){
-//				 selector.animate({
-//					 marginLeft:'-'+moveLeft
-//				 },{
-//					duration:speed,
-//					complete:function(){
-//					 $(this).css({
-//						 marginLeft : moveLeft*.86
-//					 });
-//					 moveLeftLongText(selector,moveLeft,over,3500);
-//				 }});
-//			}else{
-//				moveLeftLongText(selector,0,false,0);
-//			}
-//		 };
 		 
 		 var hoverInterval = "";
 		 
@@ -192,6 +197,16 @@
              }
              
          });
+		 
+		 //click event for deselect icon
+		 deselectIcon.click(function(e){
+			 e.stopPropagation();
+			 var _$this = $(this);
+			 
+			 elem.find('option').removeAttr('selected');
+			 _$this.closest('.SelectIT-selected').find('span.placeholder').text(placeholderTxt);
+			 _$this.removeAttr('style');
+		 });
          
 		 //click event on the document in order to hide the container
          $(document).on('click',function(){

@@ -42,6 +42,35 @@
   width: 80%;
   display: inline-block;
 }
+.SelectIT-container .SelectIT-selected > span.deselect {
+  position: absolute;
+  top: 7px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+.SelectIT-container .SelectIT-selected > span.deselect:before,
+.SelectIT-container .SelectIT-selected > span.deselect:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  height: 3px;
+  background: #525D71;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.SelectIT-container .SelectIT-selected > span.deselect:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 .SelectIT-container .SelectIT-selected .SelectIT-arrows {
   position: relative;
   float: right;

@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://github.com/cojok/selectIT.js -->
+<html lang="en" class=" is-copy-enabled"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>cojok/selectIT.js</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site"><meta content="summary" name="twitter:card"><meta content="cojok/selectIT.js" name="twitter:title"><meta content="selectIT.js - custom select option dropdown " name="twitter:description"><meta content="https://avatars2.githubusercontent.com/u/3881475?v=3&amp;s=400" name="twitter:image:src">
+      <meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="https://avatars2.githubusercontent.com/u/3881475?v=3&amp;s=400" property="og:image"><meta content="cojok/selectIT.js" property="og:title"><meta content="https://github.com/cojok/selectIT.js" property="og:url"><meta content="selectIT.js - custom select option dropdown " property="og:description">
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/Mzg4MTQ3NTo0OTY0NTg5NmIxMTYwOTRkNjMwNTU3NWNmM2U1ODQ3ZDo4MGUxOGM1OTgwNDM2Yzg1MWNmMGJhYWJiOWI1ZmFlYWM1ODhhOTJlMzNmNWQ4ZjUzYmJkMmY3ZjRmMTEzMzRm--4d6febbb4fa17f6d5497c51793718874ee530be6">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient="">
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host"><meta content="collector-cdn.github.com" name="octolytics-script-host"><meta content="github" name="octolytics-app-id"><meta content="4FE1FEE7:362B:1529D88A:560F19AE" name="octolytics-dimension-request_id"><meta content="3881475" name="octolytics-actor-id"><meta content="cojok" name="octolytics-actor-login"><meta content="532b58367051d1ae31a07665b2a10325dd7ca004b97b9ab02b92592689c693f9" name="octolytics-actor-hash">
+
+<meta content="Rails, view, files#disambiguate" data-pjax-transient="true" name="analytics-event">
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+    <meta class="js-ga-set" name="dimension4" content="Current repo nav">
+
+
+
+
+    <meta name="is-dotcom" content="true">
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="cojok">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+      <!-- </textarea> --><!-- '"` --><meta content="authenticity_token" name="csrf-param">
+<meta content="hLk10VyiRw11ce7yRaaqo//QdUgSte4VYxnm9DDOzzNy5TtWp/O1mOxhteRU3kJXVFQItdkJ7+SN5tJA/perSA==" name="csrf-token">
+    <meta content="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" name="form-nonce">
+
+    <link crossorigin="anonymous" href="./cojok_selectIT.js_files/github-7d448613a60a84dcd1e1f4f2d4939266979ea193aa79a9525436f58f3f66b98c.css" integrity="sha256-fUSGE6YKhNzR4fTy1JOSZpeeoZOqealSVDb1jz9muYw=" media="all" rel="stylesheet">
+    <link crossorigin="anonymous" href="./cojok_selectIT.js_files/github2-4a69aa85ab5a62a47bdaae736e455ee040443ccfb3564d1472a088d07f9a1cbd.css" integrity="sha256-SmmqhataYqR72q5zbkVe4EBEPM+zVk0UcqCI0H+aHL0=" media="all" rel="stylesheet">
+    
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="a9fc5a900b5ca90c888ebebc183cea5a">
+
+      
+  <meta name="description" content="selectIT.js - custom select option dropdown ">
+  <meta name="go-import" content="github.com/cojok/selectIT.js git https://github.com/cojok/selectIT.js.git">
+
+  <meta content="3881475" name="octolytics-dimension-user_id"><meta content="cojok" name="octolytics-dimension-user_login"><meta content="43245376" name="octolytics-dimension-repository_id"><meta content="cojok/selectIT.js" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="43245376" name="octolytics-dimension-repository_network_root_id"><meta content="cojok/selectIT.js" name="octolytics-dimension-repository_network_root_nwo">
+  <link href="https://github.com/cojok/selectIT.js/commits/master.atom" rel="alternate" title="Recent Commits to selectIT.js:master" type="application/atom+xml">
+
+  <style type="text/css"></style><script type="text/javascript" async="" src="./cojok_selectIT.js_files/api.js"></script></head>
+
+
+  <body class="logged_in   env-production macintosh vis-public" data-pinterest-extension-installed="cr1.39.1">
+    <a href="https://github.com/cojok/selectIT.js#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+      <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+      <div class="site-search repo-scope js-site-search" role="search">
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/cojok/selectIT.js/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/cojok/selectIT.js/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+  <label class="js-chromeless-input-container form-control">
+    <div class="scope-badge">This repository</div>
+    <input type="text" class="js-site-search-focus js-site-search-field is-clearable chromeless-input" data-hotkey="s" name="q" placeholder="Search" aria-label="Search this repository" data-global-scope-placeholder="Search GitHub" data-repo-scope-placeholder="Search" tabindex="1" autocapitalize="off">
+  </label>
+</form>
+      </div>
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="https://github.com/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="https://github.com/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+      <span class="js-socket-channel js-updatable-content" data-channel="notification-changed:cojok" data-url="/notifications/header">
+      <a href="https://github.com/notifications" aria-label="You have no unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:read" data-hotkey="g n">
+          <span class="mail-status all-read"></span>
+          <span class="octicon octicon-bell"></span>
+</a>  </span>
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="https://github.com/new" aria-label="Create new…" data-ga-click="Header, create new, icon:add">
+      <span class="octicon octicon-plus left"></span>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="https://github.com/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+
+  <a class="dropdown-item" href="https://github.com/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="cojok/selectIT.js">This repository</span>
+  </div>
+    <a class="dropdown-item" href="https://github.com/cojok/selectIT.js/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+    <a class="dropdown-item" href="https://github.com/cojok/selectIT.js/settings/collaboration" data-ga-click="Header, create new collaborator">
+      New collaborator
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-s js-menu-target" href="https://github.com/cojok" aria-label="View profile and more" data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@cojok" class="avatar" height="20" src="./cojok_selectIT.js_files/3881475" width="20">
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu  dropdown-menu-sw">
+        <div class=" dropdown-header header-nav-current-user css-truncate">
+            Signed in as <strong class="css-truncate-target">cojok</strong>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="https://github.com/cojok" data-ga-click="Header, go to profile, text:your profile">
+            Your profile
+          </a>
+        <a class="dropdown-item" href="https://github.com/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="https://github.com/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="https://github.com/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com/" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="https://github.com/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+            Settings
+          </a>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/logout" class="logout-form" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="icJ3b23xrRH0vEk+VQZBubUWckwKDdSernyxLGz1osOVJuUoHi0UrrHd2gC/xMMJ4J3QvQyB9i/OilogyWoppQ=="></div>
+            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+              Sign out
+            </button>
+</form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+      
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope="" itemtype="http://schema.org/WebPage">
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+
+      <div class="container">
+
+        <div class="clearfix">
+          
+<ul class="pagehead-actions">
+
+  <li>
+      <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="S7pyA2lFPyvgSBKg8WTChfGT0gRDwOPjL4dsPzIwd6lbH4sGxmP/ldjuiwaPx+2z+QrvwrUuhGcTkwBBJlz0CQ=="></div>    <input id="repository_id" name="repository_id" type="hidden" value="43245376">
+
+      <div class="select-menu js-menu-container js-select-menu">
+        <a href="https://github.com/cojok/selectIT.js/subscription" class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true" data-ga-click="Repository, click Watch settings, action:files#disambiguate">
+          <span class="js-select-button">
+            <span class="octicon octicon-eye"></span>
+            Unwatch
+          </span>
+        </a>
+        <a class="social-count js-social-count" href="https://github.com/cojok/selectIT.js/watchers">
+          2
+        </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header">
+              <span class="select-menu-title">Notifications</span>
+              <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+            </div>
+
+            <div class="select-menu-list js-navigation-container" role="menu">
+
+              <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input id="do_included" name="do" type="radio" value="included">
+                  <span class="select-menu-item-heading">Not watching</span>
+                  <span class="description">Be notified when participating or @mentioned.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-eye"></span>
+                    Watch
+                  </span>
+                </div>
+              </div>
+
+              <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed">
+                  <span class="select-menu-item-heading">Watching</span>
+                  <span class="description">Be notified of all conversations.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-eye"></span>
+                    Unwatch
+                  </span>
+                </div>
+              </div>
+
+              <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                <span class="select-menu-item-icon octicon octicon-check"></span>
+                <div class="select-menu-item-text">
+                  <input id="do_ignore" name="do" type="radio" value="ignore">
+                  <span class="select-menu-item-heading">Ignoring</span>
+                  <span class="description">Never be notified.</span>
+                  <span class="js-select-button-text hidden-select-button-text">
+                    <span class="octicon octicon-mute"></span>
+                    Stop ignoring
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/cojok/selectIT.js/unstar" class="js-toggler-form starred js-unstar-button" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="Jfa3otdL4C165ufDkrIxunt8kRc4W+QsB8WspCTMVyGi+q+YKpZKe7TUG3GRStKaAfrruHHMeqy0URF3sFDsww=="></div>
+      <button class="btn btn-sm btn-with-count js-toggler-target" aria-label="Unstar this repository" title="Unstar cojok/selectIT.js" data-ga-click="Repository, click unstar button, action:files#disambiguate; text:Unstar">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/cojok/selectIT.js/stargazers">
+          1
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/cojok/selectIT.js/star" class="js-toggler-form unstarred js-star-button" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="LHa9QKlUtTlLXoGKl2pHSeEXefR4dTdndDWt7o+q9DbXZkMM+/7sLPzd0RD0qceWUwuPA5J2s/rEYktNMDzgwA=="></div>
+      <button class="btn btn-sm btn-with-count js-toggler-target" aria-label="Star this repository" title="Star cojok/selectIT.js" data-ga-click="Repository, click star button, action:files#disambiguate; text:Star">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/cojok/selectIT.js/stargazers">
+          1
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/cojok/selectIT.js/fork" class="btn-with-count" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="zFjy0m4Ubt6LDMiXwgWn2rQ7gxgEmcYNZ0OgfiH6vblXhGn4+4IakLjltIAJRLizRb4IOzse/ufbmSnMv81Gvw=="></div>
+            <button type="submit" class="btn btn-sm btn-with-count" data-ga-click="Repository, show fork modal, action:files#disambiguate; text:Fork" title="Fork your own copy of cojok/selectIT.js to your account" aria-label="Fork your own copy of cojok/selectIT.js to your account">
+              <span class="octicon octicon-repo-forked"></span>
+              Fork
+            </button>
+</form>
+    <a href="https://github.com/cojok/selectIT.js/network" class="social-count">
+      0
+    </a>
+  </li>
+</ul>
+
+          <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public ">
+  <span class="mega-octicon octicon-repo"></span>
+  <span class="author"><a href="https://github.com/cojok" class="url fn" itemprop="url" rel="author"><span itemprop="title">cojok</span></a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong><a href="./cojok_selectIT.js_files/cojok_selectIT.js.html" data-pjax="#js-repo-pjax-container">selectIT.js</a></strong>
+
+  <span class="page-context-loader">
+    <img alt="" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+  </span>
+
+</h1>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline with-full-navigation">
+        <div class="repository-sidebar clearfix">
+          
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders" role="navigation" data-pjax="#js-repo-pjax-container" data-issue-count-url="/cojok/selectIT.js/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="./cojok_selectIT.js_files/cojok_selectIT.js.html" aria-label="Code" aria-selected="true" class="js-selected-navigation-item selected sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /cojok/selectIT.js">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="https://github.com/cojok/selectIT.js/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /cojok/selectIT.js/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="counter">0</span>
+
+          <img alt="" class="mini-loader" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull requests">
+      <a href="https://github.com/cojok/selectIT.js/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /cojok/selectIT.js/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull requests</span>
+          <span class="counter">0</span>
+
+          <img alt="" class="mini-loader" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Wiki">
+        <a href="https://github.com/cojok/selectIT.js/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g w" data-selected-links="repo_wiki /cojok/selectIT.js/wiki">
+          <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+          <img alt="" class="mini-loader" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="https://github.com/cojok/selectIT.js/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /cojok/selectIT.js/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="https://github.com/cojok/selectIT.js/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /cojok/selectIT.js/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+</a>    </li>
+  </ul>
+
+
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Settings">
+        <a href="https://github.com/cojok/selectIT.js/settings" aria-label="Settings" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_settings repo_branch_settings hooks /cojok/selectIT.js/settings">
+          <span class="octicon octicon-gear"></span> <span class="full-word">Settings</span>
+          <img alt="" class="mini-loader" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+    </ul>
+</nav>
+
+            <div class="only-with-full-nav">
+                
+<div class="js-clone-url clone-url " data-protocol-type="http">
+  <h3 class="text-small"><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/cojok/selectIT.js.git" readonly="readonly" aria-label="HTTPS clone URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url open" data-protocol-type="ssh">
+  <h3 class="text-small"><span class="text-emphasized">SSH</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small input-monospace js-url-field js-zeroclipboard-target" value="git@github.com:cojok/selectIT.js.git" readonly="readonly" aria-label="SSH clone URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="js-clone-url clone-url " data-protocol-type="subversion">
+  <h3 class="text-small"><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini text-small input-monospace js-url-field js-zeroclipboard-target" value="https://github.com/cojok/selectIT.js" readonly="readonly" aria-label="Subversion checkout URL">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<div class="clone-options text-small">You can clone with
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/users/set_protocol?protocol_selector=http&protocol_type=push" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="1AmD67We5zOb2772rxlOg/h/gt10pE9MsnXWc0ydGigC/iozYIkTxvbQM8UTvqbppNQWsAR4cy86q9rRiJysXQ=="></div><button class="btn-link js-clone-selector" data-protocol="http" type="submit">HTTPS</button></form>, <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/users/set_protocol?protocol_selector=ssh&protocol_type=push" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="UMBHMZDcHLJcDdGttQSe0PJn0WvBCapPdcefJ5jEEfVZdJvN9w1LDeo61YU5obyxvJQ81s+Cv1nOeIDcCxIMOw=="></div><button class="btn-link js-clone-selector" data-protocol="ssh" type="submit">SSH</button></form>, or <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/users/set_protocol?protocol_selector=subversion&protocol_type=push" class="inline-form js-clone-selector-form is-enabled" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="Lx5ky552XHyJOMfKqEET7+6DUcD6LDAZmkpWtti4RkU1u0rYjb5bY2lPjcbTYNu+XYVpQGFxdLT+VT0MHRt3Ww=="></div><button class="btn-link js-clone-selector" data-protocol="subversion" type="submit">Subversion</button></form>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</div>
+  <a href="https://mac.github.com/" class="btn btn-sm sidebar-button" title="Save cojok/selectIT.js to your computer and use it in GitHub Desktop." aria-label="Save cojok/selectIT.js to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-desktop-download"></span>
+    Clone in Desktop
+  </a>
+
+              <a href="https://github.com/cojok/selectIT.js/archive/master.zip" class="btn btn-sm sidebar-button" aria-label="Download the contents of cojok/selectIT.js as a zip file" title="Download the contents of cojok/selectIT.js as a zip file" rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div>
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container="">
+
+          
+<span id="js-show-full-navigation"></span>
+
+  <div class="repository-meta js-details-container ">
+    <div class="repository-description">
+      custom select option dropdown 
+    </div>
+
+
+    <span class="edit-link js-details-target">— <a href="https://github.com/cojok/selectIT.js#" class="muted-link">Edit</a></span>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/cojok/selectIT.js/settings/update_meta" class="edit-repository-meta" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="_method" type="hidden" value="put"><input name="authenticity_token" type="hidden" value="W0TdIfqjHjwydQ2LeB08YVsM2x0vz1sKAYgzdxIole5l4OGl622QXOUKjaPZTWUzy4MLSzIYRdEPbtVRkoWhmw=="></div>
+
+      <div class="field">
+        <label for="repo_description">Description</label>
+        <input type="text" id="repo_description" class="repo-description-field" name="repo_description" value="custom select option dropdown " placeholder="Short description of this repository">
+      </div>
+
+      <div class="field">
+        <label for="repo_homepage">Website</label>
+        <input type="url" id="repo_homepage" class="repo-website-field" name="repo_homepage" value="" placeholder="Website for this repository (optional)">
+      </div>
+
+      <button class="btn">Save</button>
+      or <a href="https://github.com/cojok/selectIT.js#" class="js-details-target">Cancel</a>
+</form></div>
+
+
+<div class="overall-summary overall-summary-bottomless">
+
+  <div class="stats-switcher-viewport js-stats-switcher-viewport">
+    <div class="stats-switcher-wrapper">
+    <ul class="numbers-summary">
+      <li class="commits">
+        <a data-pjax="" href="https://github.com/cojok/selectIT.js/commits/master">
+            <span class="octicon octicon-history"></span>
+            <span class="num text-emphasized">
+              26
+            </span>
+            commits
+        </a>
+      </li>
+      <li>
+        <a data-pjax="" href="https://github.com/cojok/selectIT.js/branches">
+          <span class="octicon octicon-git-branch"></span>
+          <span class="num text-emphasized">
+            1
+          </span>
+          branch
+        </a>
+      </li>
+
+      <li>
+        <a data-pjax="" href="https://github.com/cojok/selectIT.js/releases">
+          <span class="octicon octicon-tag"></span>
+          <span class="num text-emphasized">
+            0
+          </span>
+          releases
+        </a>
+      </li>
+
+      <li>
+        
+  <a href="https://github.com/cojok/selectIT.js/graphs/contributors">
+    <span class="octicon octicon-organization"></span>
+    <span class="num text-emphasized">
+      1
+    </span>
+    contributor
+  </a>
+      </li>
+    </ul>
+
+      <div class="repository-lang-stats">
+        <ol class="repository-lang-stats-numbers">
+          <li>
+              <a href="https://github.com/cojok/selectIT.js/search?l=html">
+                <span class="color-block language-color" style="background-color:#e44b23;"></span>
+                <span class="lang">HTML</span>
+                <span class="percent">41.6%</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://github.com/cojok/selectIT.js/search?l=css">
+                <span class="color-block language-color" style="background-color:#563d7c;"></span>
+                <span class="lang">CSS</span>
+                <span class="percent">35.3%</span>
+              </a>
+          </li>
+          <li>
+              <a href="https://github.com/cojok/selectIT.js/search?l=javascript">
+                <span class="color-block language-color" style="background-color:#f1e05a;"></span>
+                <span class="lang">JavaScript</span>
+                <span class="percent">23.1%</span>
+              </a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="repository-lang-stats-graph js-toggle-lang-stats" title="Click for language details">
+    <span class="language-color" aria-label="HTML 41.6%" style="width:41.6%; background-color:#e44b23;" itemprop="keywords">HTML</span>
+    <span class="language-color" aria-label="CSS 35.3%" style="width:35.3%; background-color:#563d7c;" itemprop="keywords">CSS</span>
+    <span class="language-color" aria-label="JavaScript 23.1%" style="width:23.1%; background-color:#f1e05a;" itemprop="keywords">JavaScript</span>
+  </div>
+
+  <div class="js-socket-channel js-updatable-content" data-channel="cojok/selectIT.js:post-receive:cojok" data-url="/cojok/selectIT.js/show_partial?partial=tree%2Frecently_touched_branches_list">
+
+
+  </div>
+
+
+  <div class="file-navigation in-mid-page">
+  <a href="https://github.com/cojok/selectIT.js/find/master" class="js-show-file-finder btn btn-sm empty-icon tooltipped tooltipped-s right" data-pjax="" data-hotkey="t" aria-label="Quickly jump between files" data-ga-click="Repository, find file, location:repo overview">
+    <span class="octicon octicon-list-unordered"></span>
+  </a>
+    <a href="https://github.com/cojok/selectIT.js/compare" aria-label="Compare, review, create a pull request" class="btn btn-sm btn-primary tooltipped tooltipped-se left compare-button" data-pjax="" data-ga-click="Repository, go to compare view, location:repo overview; icon:git-compare">
+      <span class="octicon octicon-git-compare"></span>
+    </a>
+
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w" title="master" role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax="" aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Find or create a branch…" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Find or create a branch…">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="https://github.com/cojok/selectIT.js#" data-tab-filter="branches" data-filter-placeholder="Find or create a branch…" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="https://github.com/cojok/selectIT.js#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected" href="https://github.com/cojok/selectIT.js/tree/master" data-name="master" data-skip-pjax="true" rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+        </div>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/cojok/selectIT.js/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="Cb4nSXROcO6ZgFVrx2FY3o9n1VDfJIuTMhuHLxayqBp8XvAgLx2E2EySklibnSf3Jjgvo07KljkxKq80qMjd2Q=="></div>
+            <span class="octicon octicon-git-branch select-menu-item-icon"></span>
+            <div class="select-menu-item-text">
+              <span class="select-menu-item-heading">Create branch: <span class="js-new-item-name"></span></span>
+              <span class="description">from ‘master’</span>
+            </div>
+            <input type="hidden" name="name" id="name" class="js-new-item-value">
+            <input type="hidden" name="branch" id="branch" value="master">
+            <input type="hidden" name="path" id="path" value="">
+</form>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="breadcrumb"><span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="./cojok_selectIT.js_files/cojok_selectIT.js.html" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">selectIT.js</span></a></span></span><span class="separator">/</span>
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="https://github.com/cojok/selectIT.js/new/master" class="js-new-blob-form inline-form" data-form-nonce="0359c0befb1864b8b4a6cbd6e8fa42600078a44d" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="d0UHcEsQQL87OQMlcbJv3kaEwtOCMyfbGk/npxHjfCGwzOSVSo0b1yBbvQe+5B324BPW1c7Djtqik12AroqjkQ=="></div>
+    <button class="btn-link tooltipped tooltipped-e" type="submit" data-disable-with="working…" aria-label="Create a new file here">
+      <span class="js-new-blob-submit octicon octicon-plus"></span>
+    </button>
+</form></div>
+</div>
+
+
+
+
+
+  <div class="commit commit-tease js-details-container">
+    <p class="commit-title ">
+        <a href="https://github.com/cojok/selectIT.js/commit/753ae00a7ad08b3dc0dc6b87b2cd2b37272f0dee" class="message" data-pjax="true" title="on hover see long text nice, readme updated also todo">on hover see long text nice, readme updated also todo</a>
+        
+    </p>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link tooltipped tooltipped-s" data-clipboard-text="753ae00a7ad08b3dc0dc6b87b2cd2b37272f0dee" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="https://github.com/cojok/selectIT.js/commit/753ae00a7ad08b3dc0dc6b87b2cd2b37272f0dee" class="sha-block" data-pjax="">latest commit <span class="sha">753ae00a7a</span></a>
+
+      <div class="authorship">
+        <img alt="@cojok" class="avatar" height="20" src="./cojok_selectIT.js_files/3881475" width="20">
+        <span class="author-name"><a href="https://github.com/cojok" rel="author">cojok</a></span>
+        authored <time class="updated" datetime="2015-10-02T23:56:24Z" is="relative-time" title="Oct 3, 2015, 1:56 AM GMT+2">5 minutes ago</time>
+
+      </div>
+    </div>
+  </div>
+
+
+<div class="file-wrap">
+  <a href="https://github.com/cojok/selectIT.js/tree/753ae00a7ad08b3dc0dc6b87b2cd2b37272f0dee" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+  <table class="files js-navigation-container js-active-navigation-container" data-pjax="">
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/cojok/selectIT.js/tree/master/css" class="js-directory-link js-navigation-open" id="c7a628cba22e28eb17b5f5c6ae2a266a-13140591f7e855b3b678496b4789d8c374990c35" title="css">css</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/cojok/selectIT.js/commit/753ae00a7ad08b3dc0dc6b87b2cd2b37272f0dee" class="message" data-pjax="true" title="on hover see long text nice, readme updated also todo">on hover see long text nice, readme updated also todo</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-02T23:56:24Z" is="time-ago" title="Oct 3, 2015, 1:56 AM GMT+2">5 minutes ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/cojok/selectIT.js/tree/master/img" class="js-directory-link js-navigation-open" id="b798abe6e1b1318ee36b0dcb3fb9e4d3-f3db20e84ae4581be3a188f7f8a191fcadd367e5" title="img">img</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/cojok/selectIT.js/commit/44f422b80f18e1d61d98bdef31dd34d62683126d" class="message" data-pjax="true" title="v0.1 - beta test">v0.1 - beta test</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-09-27T12:24:37Z" is="time-ago" title="Sep 27, 2015, 2:24 PM GMT+2">6 days ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-directory"></span>
+            <img alt="" class="spinner" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/cojok/selectIT.js/tree/master/js" class="js-directory-link js-navigation-open" id="32981a13284db7a021131df49e6cd203-56a61ee973d5f0d6192bd2d8f3fd7c8b89e71dec" title="js">js</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/cojok/selectIT.js/commit/753ae00a7ad08b3dc0dc6b87b2cd2b37272f0dee" class="message" data-pjax="true" title="on hover see long text nice, readme updated also todo">on hover see long text nice, readme updated also todo</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-02T23:56:24Z" is="time-ago" title="Oct 3, 2015, 1:56 AM GMT+2">5 minutes ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/cojok/selectIT.js/blob/master/LICENSE" class="js-directory-link js-navigation-open" id="9879d6db96fd29134fc802214163b95a-3550c9f687748c43e2204426233062fdc771af7c" title="LICENSE">LICENSE</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/cojok/selectIT.js/commit/cc04e747e102270ffc3a95974d5728b60651395b" class="message" data-pjax="true" title="Initial commit">Initial commit</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-09-27T12:16:52Z" is="time-ago" title="Sep 27, 2015, 2:16 PM GMT+2">6 days ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/cojok/selectIT.js/blob/master/README.md" class="js-directory-link js-navigation-open" id="04c6e90faac2675aa89e2176d2eec7d8-7586cb6a83e07e243ce8f054bf660f1d7d6324c9" title="README.md">README.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/cojok/selectIT.js/commit/753ae00a7ad08b3dc0dc6b87b2cd2b37272f0dee" class="message" data-pjax="true" title="on hover see long text nice, readme updated also todo">on hover see long text nice, readme updated also todo</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-02T23:56:24Z" is="time-ago" title="Oct 3, 2015, 1:56 AM GMT+2">5 minutes ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/cojok/selectIT.js/blob/master/TODO.md" class="js-directory-link js-navigation-open" id="0ff387c7e4dec76c01cb77aa4d338ee1-e9c76b928c6250244622d51aadab852eb494cffe" title="TODO.md">TODO.md</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/cojok/selectIT.js/commit/753ae00a7ad08b3dc0dc6b87b2cd2b37272f0dee" class="message" data-pjax="true" title="on hover see long text nice, readme updated also todo">on hover see long text nice, readme updated also todo</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-02T23:56:24Z" is="time-ago" title="Oct 3, 2015, 1:56 AM GMT+2">5 minutes ago</time></span>
+          </td>
+        </tr>
+        <tr class="js-navigation-item">
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="./cojok_selectIT.js_files/octocat-spinner-32.gif" width="16">
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="https://github.com/cojok/selectIT.js/blob/master/selectIT.html" class="js-directory-link js-navigation-open" id="059a0ceea76fffda526217177b4bae60-91b229b00f423f4f213961774846a3082c8f2dcc" title="selectIT.html">selectIT.html</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="https://github.com/cojok/selectIT.js/commit/0d34395da56c4ef5a9dd226408261e36bf37cfcf" class="message" data-pjax="true" title="disabled option added to the plugin and also to the demo html">disabled option added to the plugin and also to the demo html</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-10-02T22:23:49Z" is="time-ago" title="Oct 3, 2015, 12:23 AM GMT+2">2 hours ago</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+  <div id="readme" class="boxed-group flush clearfix announce instapaper_body md">
+    <h3>
+      <span class="octicon octicon-book"></span>
+      README.md
+    </h3>
+
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-selectitjs" class="anchor" href="https://github.com/cojok/selectIT.js#selectitjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>selectIT.js</h1>
+
+<p>custom select option dropdown </p>
+
+<p>V0.1 - beta is here</p>
+
+<p>This is only the beta version of the plugin. Hope you enjoy it!</p>
+
+<p>This plugin is here to help customizing the select option dropdown. The only thing you need to do is to customize the standard css/less in order to have your own nice styled dropdown. </p>
+
+<p>This was tested in the lates versions of FireFox, Chrome and Safari. I have also tested it in IE(10&amp;9) and it worked good. In IE8 I didn't tried it, but if you need IE8 support then this is not for you.</p>
+
+<p>Please check my todo list file to see what is comming up.</p>
+
+<p>Features:</p>
+
+<ol>
+<li>Long text is truncated;</li>
+<li>On hover long text is visible in a nice way;</li>
+<li>Easy to customize;</li>
+<li>LESS version;</li>
+<li>jQuery dependent</li>
+</ol>
+
+<p>How to use the selectIT.js plugin:</p>
+
+<ol>
+<li><p>In the HTML select tag you need to have:</p>
+
+<ul>
+<li>name(a msut for using it in a ajax call);</li>
+<li>class,id or nothing for identifying the element for the plugin</li>
+<li>placeholder for having the placeholder text for the list</li>
+<li>options must have values in order to trigger the change event on the select</li>
+<li>options with property disabled are acting the same in the SelectIT.js plugin</li>
+<li>TBA</li>
+</ul>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">select</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>selectIT<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>selectIT<span class="pl-pds">"</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s"><span class="pl-pds">"</span>SelectIT<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Jan<span class="pl-pds">"</span></span>&gt;January&lt;/<span class="pl-ent">option</span>&gt;
+        &lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Feb<span class="pl-pds">"</span></span>&gt;February&lt;/<span class="pl-ent">option</span>&gt;
+        &lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Mar<span class="pl-pds">"</span></span>&gt;March&lt;/<span class="pl-ent">option</span>&gt;
+        &lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Apr<span class="pl-pds">"</span></span>&gt;April&lt;/<span class="pl-ent">option</span>&gt;
+        &lt;<span class="pl-ent">option</span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>May<span class="pl-pds">"</span></span>&gt;May&lt;/<span class="pl-ent">option</span>&gt;
+    &lt;/<span class="pl-ent">select</span>&gt;</pre></div></li>
+<li><p>JS calling for the plugin:</p>
+
+<div class="highlight highlight-source-js"><pre>$(<span class="pl-k">function</span> () {
+    $(<span class="pl-s"><span class="pl-pds">'</span>.selectIT<span class="pl-pds">'</span></span>).selectIT();
+  });</pre></div></li>
+<li><p>SelectIT.js validation needs to be made on the select tag as a normal validation for non custom select tag. This is posible because the SelectIT.js plugin is changing also the select tag value according to the plugin selected element.</p></li>
+</ol>
+</article>
+  </div>
+
+
+        </div>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+  </div>
+
+
+    </div>
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com/" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com/" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com/" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+        <li><a href="https://github.com/pricing" data-ga-click="Footer, go to pricing, text:pricing">Pricing</a></li>
+
+    </ul>
+
+    <a href="https://github.com/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>© 2015 <span title="0.07769s from github-fe125-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com/" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <span class="octicon octicon-x"></span>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" integrity="sha256-+Ec97OckLaaiDVIxNjSIGzl1xSzrqh5sOBV8DyYYVpE=" src="./cojok_selectIT.js_files/frameworks-f8473dece7242da6a20d52313634881b3975c52cebaa1e6c38157c0f26185691.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-m/Opn3sG+OjWBq0zNSqiMtGtBf/m8WDZomr344srYOU=" src="./cojok_selectIT.js_files/github-9bf3a99f7b06f8e8d606ad33352aa232d1ad05ffe6f160d9a26af7e38b2b60e5.js"></script>
+      
+      
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <span class="octicon octicon-alert"></span>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+  
+
+
+<div id="window-resizer-tooltip" style="display: block;"><a href="https://github.com/cojok/selectIT.js#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1440</span> x <span class="tooltipHeight" id="winHeight">873</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1440</span> x <span class="tooltipHeight" id="vpHeight">734</span></div><span style="height: 20px; width: 40px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,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); background-color: transparent; background-size: 40px 20px;"></span></body></html>
