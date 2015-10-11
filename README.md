@@ -26,7 +26,8 @@ How to use the selectIT.js plugin:
     * placeholder for having the placeholder text for the list
     * options must have values in order to trigger the change event on the select
 	* options with property disabled are acting the same in the SelectIT.js plugin
-    * TBA
+    * data-select attribute is used to reset the select option tag and dropdown
+	* TBA
 
 	```HTML
 	<select name="selectIT" class="selectIT" placeholder="SelectIT">
@@ -47,39 +48,3 @@ How to use the selectIT.js plugin:
 	```
 
 3. SelectIT.js validation needs to be made on the select tag as a normal validation for non custom select tag. This is posible because the SelectIT.js plugin is changing also the select tag value according to the plugin selected element.
-
-4. Using the disabled options in the select list: 
-
-	```HTML
-	<select name="selectIT" class="selectIT" placeholder="SelectIT">
-		<option disabled="disabled" value="Jan">January</option>
-		<option value="Feb">February</option>
-		<option value="Mar">March</option>
-		<option disabled="disabled" value="Apr">April</option>
-		<option value="May">May</option>
-	</select>
-	```
-	
-	```javascript
-	$(function () {
-		$('.selectIT').selectIT();
-	  });
-	```
-	
-4. Using the diselect option for reseting the dropdown selection: 
-
-	```HTML
-	<select name="selectIT" class="selectIT" placeholder="SelectIT" data-deselect="deselect">
-		<option value="Jan">January</option>
-		<option value="Feb">February</option>
-		<option value="Mar">March</option>
-		<option value="Apr">April</option>
-		<option value="May">May</option>
-	</select>
-	```
-	
-	```javascript
-	$(function () {
-		$('.selectIT').selectIT();
-	  });
-	```
