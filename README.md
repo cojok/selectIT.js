@@ -16,7 +16,7 @@ Features:
   2. On hover long text is visible in a nice way;
   3. Easy to customize;
   4. LESS version;
-  5. jQuery dependent
+  5. jQuery dependent(for the moment);
 
 How to use the selectIT.js plugin:
 
@@ -27,10 +27,9 @@ How to use the selectIT.js plugin:
     * options must have values in order to trigger the change event on the select
 	* options with property disabled are acting the same in the SelectIT.js plugin
     * data-select attribute is used to reset the select option tag and dropdown
-	* TBA
 
 	```HTML
-	<select name="selectIT" class="selectIT" placeholder="SelectIT">
+	<select name="selectIT" class="selectIT" placeholder="SelectIT" data-deselect="true">
 		<option value="Jan">January</option>
 		<option value="Feb">February</option>
 		<option value="Mar">March</option>
@@ -48,3 +47,12 @@ How to use the selectIT.js plugin:
 	```
 
 3. SelectIT.js validation needs to be made on the select tag as a normal validation for non custom select tag. This is posible because the SelectIT.js plugin is changing also the select tag value according to the plugin selected element.
+
+
+4. Options for the select tag: 
+	
+	| (data) attribute | type   |     value     |
+	|:----------------:|:------:| -------------:|
+	| data-select      | bool   | true or false |
+	| placeholder      | string | the name of the select tag |
+	| zebra stripes | are neat      |    $1 |

@@ -83,7 +83,7 @@
   background: url('../img/down_arrow.png') no-repeat center / contain;
   display: block;
 }
-.SelectIT-container ul {
+.SelectIT-container ul.SelectIT-options {
   position: absolute;
   top: 12px;
   border: 1px solid #ccc;
@@ -103,7 +103,7 @@
   text-overflow: ellipsis;
   z-index: 999;
 }
-.SelectIT-container ul > li {
+.SelectIT-container ul.SelectIT-options > li {
   list-style: none;
   text-align: left;
   padding: 5px 10px;
@@ -111,17 +111,41 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.SelectIT-container ul > li:not(.disabled):hover {
+.SelectIT-container ul.SelectIT-options > li > span {
+  font-weight: 600;
+  padding: 0;
+  margin: 0 -5px;
+  color: #000;
+}
+.SelectIT-container ul.SelectIT-options > li > span + ul.option-list-group {
+  padding: 0;
+  margin: 0 -10px;
+  font-weight: 300;
+}
+.SelectIT-container ul.SelectIT-options > li:not(.disabled):not(.option-group-title):hover {
   background: #006699;
   color: #fff;
   text-overflow: clip;
 }
-.SelectIT-container ul > li.disabled {
+.SelectIT-container ul.SelectIT-options > li.option-group-title > span + ul.option-list-group > li {
+  list-style: none;
+  text-align: left;
+  padding: 5px 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.SelectIT-container ul.SelectIT-options > li:not(.disabled).option-group-title > span + ul.option-list-group > li:hover {
+  background: #006699;
+  color: #fff;
+  text-overflow: clip;
+}
+.SelectIT-container ul.SelectIT-options > li.disabled {
   opacity: .3;
   cursor: not-allowed !important;
   pointer-events: none;
 }
-.SelectIT-container ul.active {
+.SelectIT-container ul.SelectIT-options.active {
   display: block;
 }
 .SelectIT-container.with-dropdown .SelectIT-arrows span.arrow {

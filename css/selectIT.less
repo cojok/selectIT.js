@@ -1,36 +1,32 @@
 @import 'elements.less';
-
 .SelectIT-container {
-    .user-select(none);
-    background: #fff;
-    color: #000;
-    border: 1px solid #ccc;
-    .rounded(2px);
-    .box-shadow(0 1px 2px #ebebeb);
-    width: 130px;
-    height: 25px;
-    font-size: 14px;
-    position: relative;
-    cursor: pointer;
-    margin: 50px auto;
-    padding: 0;
-
-    .SelectIT-selected {
-        width: 90%;
-        height: 25px;
-        line-height: 25px;
-        text-align: left;
-        position: relative;
-        padding: 0 10px;
-
-        > span.placeholder {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 80%;
-            display: inline-block;
-        }
-		
+	.user-select(none);
+	background: #fff;
+	color: #000;
+	border: 1px solid #ccc;
+	.rounded(2px);
+	.box-shadow(0 1px 2px #ebebeb);
+	width: 130px;
+	height: 25px;
+	font-size: 14px;
+	position: relative;
+	cursor: pointer;
+	margin: 50px auto;
+	padding: 0;
+	.SelectIT-selected {
+		width: 90%;
+		height: 25px;
+		line-height: 25px;
+		text-align: left;
+		position: relative;
+		padding: 0 10px;
+		> span.placeholder {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			width: 80%;
+			display: inline-block;
+		}
 		> span.deselect {
 			position: absolute;
 			top: 7px;
@@ -38,7 +34,8 @@
 			width: 10px;
 			height: 10px;
 			display: none;
-			&:before,&:after {
+			&:before,
+			&:after {
 				content: '';
 				position: absolute;
 				width: 100%;
@@ -51,61 +48,81 @@
 				.transform(rotate(-45deg));
 			}
 		}
-
-        .SelectIT-arrows {
-            position: relative;
-            float: right;
-            line-height: 25px;
-            padding: 5px 0;
-
-            span.arrow {
-                width: 15px;
-                height: 15px;
-                background: url('../img/down_arrow.png') no-repeat center /contain;
-                display: block;
-            }
-        }
-    }
-
-    ul {
-        position: absolute;
-        top: 12px;
-        border: 1px solid #ccc;
-        text-align: left;
-        padding: 0;
-        width: 100%;
-        max-height: 320px;
-        overflow-y: scroll;
-        .rounded(2px);
-        .box-shadow(0px 2px 2px 2px #ebebeb);
-        display: none;
-        background: #fff;
-        text-overflow: ellipsis;
-        z-index: 999;
-
-        > li {
-            list-style: none;
-            text-align: left;
-            padding: 5px 10px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-
-            &:not(.disabled):hover {
-                background: #006699;
-                color: #fff;
+		.SelectIT-arrows {
+			position: relative;
+			float: right;
+			line-height: 25px;
+			padding: 5px 0;
+			span.arrow {
+				width: 15px;
+				height: 15px;
+				background: url('../img/down_arrow.png') no-repeat center /contain;
+				display: block;
+			}
+		}
+	}
+	ul.SelectIT-options {
+		position: absolute;
+		top: 12px;
+		border: 1px solid #ccc;
+		text-align: left;
+		padding: 0;
+		width: 100%;
+		max-height: 320px;
+		overflow-y: scroll;
+		.rounded(2px);
+		.box-shadow(0px 2px 2px 2px #ebebeb);
+		display: none;
+		background: #fff;
+		text-overflow: ellipsis;
+		z-index: 999;
+		> li {
+			list-style: none;
+			text-align: left;
+			padding: 5px 10px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			> span {
+				font-weight: 600;
+				padding: 0;
+				margin: 0 -5px;
+				color: #000;
+				+ ul.option-list-group {
+					padding: 0;
+					margin: 0 -10px;
+					font-weight: 300;
+				}
+			}
+			&:not(.disabled):not(.option-group-title):hover {
+				background: #006699;
+				color: #fff;
 				text-overflow: clip;
-            }
-			
+			}
+			&.option-group-title > span + ul.option-list-group > li {
+				list-style: none;
+				text-align: left;
+				padding: 5px 15px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			&:not(.disabled).option-group-title > span + ul.option-list-group > li:hover {
+				background: #006699;
+				color: #fff;
+				text-overflow: clip;
+			}
 			&.disabled {
 				opacity: .3;
 				cursor: not-allowed!important;
 				pointer-events: none;
 			}
-        }
-
-        &.active { display: block; }
-    }
-
-    &.with-dropdown .SelectIT-arrows span.arrow { background: url('../img/up_arrow.png') no-repeat center /contain; }
+		}
+		&.active {
+			display: block;
+		}
+	}
+	&.with-dropdown .SelectIT-arrows span.arrow {
+		background: url('../img/up_arrow.png') no-repeat center /contain;
+	}
 }
